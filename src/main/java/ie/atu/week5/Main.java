@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int[] MyArray = new int[10];
-        for (int i = 0; i != 10; i++){
-            MyArray[i] = ((i + 1) * 100);
-            System.out.println("Element at index " + i + ": " + MyArray[i]);
+        int x = 0;
+        for (int i : MyArray){ //"Enhanced" for loop. Ends up with more code in this case. Only doing this because you asked me to
+            MyArray[i] = ((x + 1) * 100);
+            x++;
+            System.out.println("Element at index " + x + ": " + MyArray[i]);
         }
 
         Scanner input = new Scanner(System.in);
