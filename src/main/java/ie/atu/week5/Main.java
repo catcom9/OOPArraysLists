@@ -1,28 +1,29 @@
 package ie.atu.week5;
 
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] MyArray = new int[10];
-        int x = 0;
-        for (int i : MyArray){ //"Enhanced" for loop. Ends up with more code in this case. Only doing this because you asked me to
-            i = ((x + 1) * 100);
-            x++;
-            System.out.println("Element at index " + x + ": " + i);
+        ArrayList<Integer> arrayList = new ArrayList<>(10);
+        for(int i = 0; i != 10; i++){
+            arrayList.add((i+1) * 100);
         }
+        PrintArray(arrayList);
 
         Scanner input = new Scanner(System.in);
+        System.out.println("Enter a new number: ");
+        arrayList.add(input.nextInt());
+        PrintArray(arrayList);
 
-        try{
-            System.out.println("Enter a number: ");
-            MyArray[10] = input.nextInt();
-        } catch (Exception e){
-            System.out.println("Im afraid i cant let you do that.");
+
+
+    }
+
+    public static void PrintArray( ArrayList<Integer> MyList){
+        for(int i = 0; i != MyList.size(); i++){
+            System.out.println("Element at " + i + ": " + MyList.get(i));
         }
-
-
-
-
     }
 }
