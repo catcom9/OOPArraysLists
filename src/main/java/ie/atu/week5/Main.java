@@ -7,9 +7,9 @@ public class Main {
         int[] MyArray = new int[10];
         int x = 0;
         for (int i : MyArray){ //"Enhanced" for loop. Ends up with more code in this case. Only doing this because you asked me to
-            MyArray[i] = ((x + 1) * 100);
+            i = ((x + 1) * 100);
             x++;
-            System.out.println("Element at index " + x + ": " + MyArray[i]);
+            System.out.println("Element at index " + x + ": " + i);
         }
 
         Scanner input = new Scanner(System.in);
